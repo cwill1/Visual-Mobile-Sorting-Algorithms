@@ -1,2 +1,2 @@
 # Visual-Mobile-Sorting-Algorithms
-![Alt text](relative/path/to/img.jpg?raw=true "Title"
+![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
