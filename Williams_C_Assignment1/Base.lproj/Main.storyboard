@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,141 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Williams_C_Assignment1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqa-qJ-qnG" customClass="ArrayView" customModule="Williams_C_Assignment1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="129" width="343" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="0W4-hA-zgT"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-Ch-rRp">
+                                <rect key="frame" x="16" y="36" width="343" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-71-294">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N =  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-kP-Vvd">
+                                        <rect key="frame" x="46" y="0.0" width="36.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fij-1Y-wxm">
+                                        <rect key="frame" x="82.5" y="0.0" width="260.5" height="29"/>
+                                        <segments>
+                                            <segment title="16"/>
+                                            <segment title="32"/>
+                                            <segment title="48"/>
+                                            <segment title="64"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentArraySizeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZJJ-bu-Qhp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlC-O8-FWA" customClass="ArrayView" customModule="Williams_C_Assignment1" customModuleProvider="target">
+                                <rect key="frame" x="16" y="418" width="343" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="Hqk-bT-r6I"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-YQ-ZIG">
+                                <rect key="frame" x="16" y="346" width="343" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-Ds-c2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N =  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYR-97-I4b">
+                                        <rect key="frame" x="46" y="0.0" width="36.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eve-ns-KNb">
+                                        <rect key="frame" x="82.5" y="0.0" width="260.5" height="29"/>
+                                        <segments>
+                                            <segment title="16"/>
+                                            <segment title="32"/>
+                                            <segment title="48"/>
+                                            <segment title="64"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentArraySizeAction2:" destination="BYZ-38-t0r" eventType="valueChanged" id="oZS-sa-Shn"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="agc-B2-ZWR">
+                                <rect key="frame" x="16" y="382" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Insertion"/>
+                                    <segment title="Selection"/>
+                                    <segment title="QuickSort"/>
+                                    <segment title="Merge Sort"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSegmentedControlPressed2:" destination="BYZ-38-t0r" eventType="valueChanged" id="7cR-Xk-evZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="jst-62-PuL">
+                                <rect key="frame" x="16" y="80" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Insertion"/>
+                                    <segment title="Selection"/>
+                                    <segment title="QuickSort"/>
+                                    <segment title="Merge Sort"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sortSegmentedControlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="0PL-As-bCJ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ogn-YQ-ZIG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5Sh-Xy-thi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jst-62-PuL" secondAttribute="trailing" constant="16" id="9AL-Nu-lVH"/>
+                            <constraint firstItem="agc-B2-ZWR" firstAttribute="top" secondItem="Ogn-YQ-ZIG" secondAttribute="bottom" constant="8" symbolic="YES" id="HpB-Xr-ka7"/>
+                            <constraint firstItem="jst-62-PuL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="I6I-xe-g73"/>
+                            <constraint firstItem="Dqa-qJ-qnG" firstAttribute="top" secondItem="jst-62-PuL" secondAttribute="bottom" constant="21" id="IRq-xF-sQR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ogn-YQ-ZIG" secondAttribute="trailing" constant="16" id="IfS-aZ-1zU"/>
+                            <constraint firstItem="Ogn-YQ-ZIG" firstAttribute="leading" secondItem="agc-B2-ZWR" secondAttribute="leading" id="J6f-B1-D4Y"/>
+                            <constraint firstItem="jst-62-PuL" firstAttribute="top" secondItem="vJZ-Ch-rRp" secondAttribute="bottom" constant="16" id="NSy-Ao-xlc"/>
+                            <constraint firstItem="hlC-O8-FWA" firstAttribute="top" secondItem="agc-B2-ZWR" secondAttribute="bottom" constant="8" symbolic="YES" id="OcV-d8-9Dw"/>
+                            <constraint firstItem="Ogn-YQ-ZIG" firstAttribute="trailing" secondItem="agc-B2-ZWR" secondAttribute="trailing" id="RQY-8Y-VhH"/>
+                            <constraint firstItem="Ogn-YQ-ZIG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="346" id="RrA-7D-fwm"/>
+                            <constraint firstItem="Dqa-qJ-qnG" firstAttribute="trailing" secondItem="Ogn-YQ-ZIG" secondAttribute="trailing" id="UUX-EH-V2B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vJZ-Ch-rRp" secondAttribute="trailing" constant="16" id="VCm-Ae-w0K"/>
+                            <constraint firstItem="vJZ-Ch-rRp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="YJr-5f-Maa"/>
+                            <constraint firstItem="Dqa-qJ-qnG" firstAttribute="leading" secondItem="Ogn-YQ-ZIG" secondAttribute="leading" id="cAO-Ko-77v"/>
+                            <constraint firstItem="Ogn-YQ-ZIG" firstAttribute="top" secondItem="Dqa-qJ-qnG" secondAttribute="bottom" constant="20" id="e4X-0c-grN"/>
+                            <constraint firstItem="agc-B2-ZWR" firstAttribute="leading" secondItem="hlC-O8-FWA" secondAttribute="leading" id="fNh-4p-iPV"/>
+                            <constraint firstItem="vJZ-Ch-rRp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jyX-PW-9Ud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hlC-O8-FWA" secondAttribute="bottom" constant="52" id="mfq-F1-g5b"/>
+                            <constraint firstItem="agc-B2-ZWR" firstAttribute="trailing" secondItem="hlC-O8-FWA" secondAttribute="trailing" id="pOG-Ly-Rw8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="arraySizeOutlet" destination="fij-1Y-wxm" id="utI-b4-isV"/>
+                        <outlet property="arraySizeOutlet2" destination="eve-ns-KNb" id="ZIH-Ix-MrB"/>
+                        <outlet property="arrayView" destination="Dqa-qJ-qnG" id="aCP-iI-KuB"/>
+                        <outlet property="arrayView2" destination="hlC-O8-FWA" id="e6n-Lz-kL9"/>
+                        <outlet property="sortSegmentedControl" destination="jst-62-PuL" id="sfF-9A-RcZ"/>
+                        <outlet property="sortSegmentedControl2" destination="agc-B2-ZWR" id="Tpq-Sx-W7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
